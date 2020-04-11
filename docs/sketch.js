@@ -10,21 +10,21 @@ function Tree(node_text){
   this.render = function(x, y){
     fill(255);
     stroke(0);
-    rect(x-40, y-5, 80, 60);
+    rect(x-30, y-5, 60, 60);
     fill(0);
     textSize(16);
-    text(this.text, x-30, y, 60, 50);
+    text(this.text, x-25, y, 50, 50);
     if (this.subnodes.length > 0){
-      line(x, y+65, x, y+75)
+      line(x, y+55, x, y+65)
 
       if (this.subnodes.length == 1){
-        line(x, y+65, x, y+80);
+        line(x, y+55, x, y+80);
         this.subnodes[0].render(x, y+80)
       }
       else{
-        line(x - 100*this.subnodes.length + 200, y+65, x + 100*this.subnodes.length, y+75)
+        line(x - 100*this.subnodes.length + 200, y+65, x + 100*this.subnodes.length, y+65)
         for (let i = 0; i < this.subnodes.length; i++){
-          line(x - (i - 0.5*this.subnodes.length)*200, y+75,x - (i - 0.5*this.subnodes.length)*200, y+80);
+          line(x - (i - 0.5*this.subnodes.length)*200, y+65,x - (i - 0.5*this.subnodes.length)*200, y+80);
           this.subnodes[i].render(x - (i - 0.5*this.subnodes.length)*200, y+80)
         }
       }
@@ -38,7 +38,7 @@ function setup() {
   createCanvas(w, h);
   fill(0);
   stroke(0);
-  t = new Tree('test'); //example
+  t = new Tree('test');
   t.add_subnode('sub');
   t.add_subnode('sub');
   t.add_subnode('sub');
