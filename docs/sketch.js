@@ -4,6 +4,7 @@ let h = 1000;
 function Tree(node_text){
   this.text = node_text;
   this.subnodes = [];
+  this.textsize = 16;
   this.add_subnode = function (node_text){
     this.subnodes.push(new Tree(node_text))
   }
@@ -12,7 +13,7 @@ function Tree(node_text){
     stroke(0);
     rect(x-30, y-5, 60, 60);
     fill(0);
-    textSize(16);
+    textSize(this.textsize);
     text(this.text, x-25, y, 50, 50);
     if (this.subnodes.length > 0){
       line(x, y+55, x, y+65)
