@@ -1,5 +1,5 @@
 # Decision-Tree-Browser-Renderer
-Decision Tree Browser Renderer
+A very simple and basic decision-tree in-browser renderer powered by p5.js
 
 To use, the browser console is required.
 
