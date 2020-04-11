@@ -23,7 +23,7 @@ function Tree(node_text){
         this.subnodes[0].render(x, y+80)
       }
       else{
-        line(x - 100*this.subnodes.length + 200, y+65, x + 100*this.subnodes.length, y+65)
+        line(x - 100*this.subnodes.length + 200, y+65, x + 100*this.subnodes.length + 100, y+65)
         for (let i = 0; i < this.subnodes.length; i++){
           line(x - (i - 0.5*this.subnodes.length)*200, y+65,x - (i - 0.5*this.subnodes.length)*200, y+80);
           this.subnodes[i].render(x - (i - 0.5*this.subnodes.length)*200, y+80)
