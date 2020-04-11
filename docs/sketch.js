@@ -10,10 +10,10 @@ function Tree(node_text){
   this.render = function(x, y){
     fill(255);
     stroke(0);
-    rect(x-30, y-5, 60, 60);
+    rect(x-40, y-5, 60, 80);
     fill(0);
     textSize(16);
-    text(this.text, x-25, y, 50, 50);
+    text(this.text, x-30, y, 50, 60);
     if (this.subnodes.length > 0){
       line(x, y+55, x, y+65)
 
